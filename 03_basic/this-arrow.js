@@ -23,20 +23,28 @@
 
 //ARROW FUNCTION
 
-const addnum=(num1,num2)=>{
-    return num1+num2
-}
-console.log(addnum(10,10))
+// const addnum=(num1,num2)=>{
+//     return num1+num2
+// }
+// console.log(addnum(10,10))
 
-//IMPLICIT RETURN MAINLY USE IN REACT
-const addnumM=(num1,num2)=> (num1+num2)
+// //IMPLICIT RETURN MAINLY USE IN REACT
+// const addnumM=(num1,num2)=> (num1+num2)
 
-console.log("implicit return",addnumM(100,10))
+// console.log("implicit return",addnumM(100,10))
 
 //  (()=>{
 //         console.log("CEEG4EGEG");
 // })()
 
 (function chai(){
-    console.log(`erervr`)
-})()
+    console.log("DB CONNECTED")
+})();
+
+(function code(){
+    console.log("DB CONNECTED2")
+})();
+
+((name)=>{
+    console.log(`db connected 3,${name}`)
+})('safwan')
