@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>EDIT OR REMOVE IN DOM</title>
+   
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+<script>
+
+    //NOT BETER APPROACH BECAUSE IT TRAVERSE THE WHOLE TREE
+    function addlanguage(addlang){            //function created
+         const li=document.createElement("li")   //li element created
+         li.innerHTML=`${addlang}`               //set it to innerHTML
+         document.querySelector(".language").appendChild(li)
+      }  //append it to classs
+    addlanguage("python")   //function call
+    addlanguage("java")
+
+    function addoptilang(addlang){
+       const li= document.createElement("li")
+       li.appendChild(document.createTextNode(addlang))
+       document.querySelector(".language").appendChild(li)
+    }
+    addoptilang("ruby")
+
+                        //EDIT text
+
+   const secondlang= document.querySelector("li:nth-child(2)")
+//secondlang.innerHTML="wordpress"    //not an optimize way
+  const newli=  document.createElement("li")
+    newli.textContent="mojo"    //newli.outerHTML is also anoter method
+    secondlang.replaceWith(newli)
+
+                            //REMOVE ELEMENT
+    
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
+</script>
+</html>
